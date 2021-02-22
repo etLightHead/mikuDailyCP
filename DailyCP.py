@@ -64,8 +64,8 @@ class DailyCP:
             # "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
             # "User-Agent": "okhttp/3.12.4"
         })
-        extension = {"deviceId": str(uuid.uuid4()), "systemName": "未来操作系统", "userId": "5201314",
-                     "appVersion": "8.1.13", "model": "红星一号量子计算机", "lon": 0.0, "systemVersion": "初号机", "lat": 0.0}
+        extension = {"deviceId": str(uuid.uuid4()), "systemName": "unknown", "userId": "5201314",
+                     "appVersion": "8.1.13", "model": "unknown", "lon": 0.0, "systemVersion": "unknown", "lat": 0.0}
         self.session.headers.update(
             {"Cpdaily-Extension": self.encrypt(json.dumps(extension))})
         self.setHostBySchoolName(schoolName)
